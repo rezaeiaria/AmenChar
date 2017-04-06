@@ -5,13 +5,13 @@
 % 0.0. Add all directories to your MATLABA path
 addpath(genpath('.'));
 
-% 0.1. Load a dataset
+% Load a dataset
 load example\amazon-video.mat
 
-% 0.2. Choose class names from features
+% Choose classes from features
 classes = {'animation', 'classics'};
 
-% 0.3. Find class membership matrix (C) and 
+% Find class membership matrix (C) and 
 % remove the features selected as a class
 [C, F, F_label] = util_class(F, F_label, classes);
 
@@ -19,12 +19,12 @@ classes = {'animation', 'classics'};
 % 1. Find communities
 % -------------------------------------------------------------------------
 
-% 1.1. Load communities
-% You can use any algorithms to find any sorts of target subgraphs here.
+% Load communities
+% You can use ANY algorithms to find any sorts of target subgraphs here.
 load example\coms.mat
 
-% 1.2. (Optional) Filter attributes to only those that appear 
-% in selected communities
+% (Optional) Filter attributes to only those that appear 
+% in selected communities to achieve higher speed.
 [F,F_label] = util_filterComFeatures(coms, F, F_label);
 
 % -------------------------------------------------------------------------
@@ -40,10 +40,10 @@ load example\coms.mat
 % 3. Partition attributes
 % -------------------------------------------------------------------------
 
-% 3.1. We first partition the attributes
+% Partition the attributes
 [part] = main_partition(Xs);
 
-% 3.2. We sort attributes by their "utility" along with their labels
+% Sort attributes by their "utility" along with their labels
 [util, util_labels] = main_filterUtility(Xs, part, F_label);
 
 
