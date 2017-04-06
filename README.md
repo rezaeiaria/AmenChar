@@ -6,7 +6,6 @@ For installation, you should add all files in the main directory to MATLAB's pat
 
 ``addpath(genpath('.'));``
 
----
 ## Usage
 You can see an example of the usage in ``~/example/example.m``. Below, we go through the example step by step.
 
@@ -71,7 +70,6 @@ If you want to use our (faster) heuristics instead of the (1-1/e) approx. soluti
 - ``[part, ~] = SWP_topK(Xs, K)`` for only finding **_top-K_** attributes for each class.
 
 
----
 ## Citing
 If our datasets or our codes are useful in your research, we kindly ask you to cite the paper below:
 
@@ -81,7 +79,6 @@ If our datasets or our codes are useful in your research, we kindly ask you to c
 	  journal={arXiv preprint arXiv:1701.09039},
 	  year={2017}
 	}
-	
----
+
 ## Acknowledgement
 The optimization code for the *Submodular Welfare Problem* is provided by *Andreas Krause* [here](https://www.mathworks.com/matlabcentral/fileexchange/20504-submodular-function-optimization). If their code has been useful in your work, please cite them properly.
