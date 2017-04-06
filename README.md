@@ -1,13 +1,13 @@
-#AMENChar
+# AMENChar
 
 
-##Installation
+## Installation
 For installation, you should add all files in the main directory to MATLAB's path. You can do that with opening MATLAB in the main directory and using:
 
 ``addpath(genpath('.'));``
 
 ---
-##Usage
+## Usage
 You can see an example of the usage in ``~/example/example.m``. Below, we go through the example step by step.
 
 1.  Load an attributed graph. You can see our datasets [here](http://www3.cs.stonybrook.edu/~arezaei/project/amen_char.html#data).
@@ -61,7 +61,7 @@ You can see an example of the usage in ``~/example/example.m``. Below, we go thr
 	'Warner Home Video'    'Mystery & Suspense'        
 	```
 
-####**Alternate SWP Optimization**
+#### **Alternate SWP Optimization**
 
 
 
@@ -72,7 +72,7 @@ If you want to use our (faster) heuristics instead of the (1-1/e) approx. soluti
 
 
 ---
-##Citing
+## Citing
 If our datasets or our codes are useful in your research, we kindly ask you to cite the paper below:
 
     @article{rezaei2017ties,
@@ -83,5 +83,5 @@ If our datasets or our codes are useful in your research, we kindly ask you to c
 	}
 	
 ---
-##Acknowledgement
+## Acknowledgement
 The optimization code for the *Submodular Welfare Problem* is provided by *Andreas Krause* [here](https://www.mathworks.com/matlabcentral/fileexchange/20504-submodular-function-optimization). If their code has been useful in your work, please cite them properly.
