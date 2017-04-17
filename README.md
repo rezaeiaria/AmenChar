@@ -1,5 +1,8 @@
 # AMENChar
 
+AMENChar is a MATLAB library that characterizing (and possible *differentiating*) attributes among different classes 
+of subgraphs in an **_attributed graph_**. These attributes can be used to further study the differences in the 
+two classes, such as differences in structure of communities or behavior of individuals.
 
 ## Installation
 For installation, you should add all files in the main directory to MATLAB's path. You can do that with opening MATLAB in the main directory and using:
@@ -23,6 +26,7 @@ You can see an example of the usage in ``~/example/example.m``. Below, we go thr
 	
 	% Find class membership matrix (C) and 
 	% remove the features selected as a class
+	% You can use ANY other method to choose classes
 	[C, F, F_label] = util_class(F, F_label, classes);
 	
 	% Load communities
@@ -33,6 +37,7 @@ You can see an example of the usage in ``~/example/example.m``. Below, we go thr
 	% in selected communities to achieve higher speed.
 	[F,F_label] = util_filterComFeatures(coms, F, F_label);
 	```
+	**_NOTE_**: `coms` should be a MATLAB cell array of size `<# of classes> x 1`. Each cell is also a cell array with every row a vector of the IDs of nodes inside a target subgraph. Examine `~/example/coms.mat` in MATLAB for more details.
 3. Find the attribute weights of the subgraphs.
 
 	```matlab
@@ -73,12 +78,23 @@ If you want to use our (faster) heuristics instead of the (1-1/e) approx. soluti
 ## Citing
 If our datasets or our codes are useful in your research, we kindly ask you to cite the paper below:
 
-    @article{rezaei2017ties,
-	  title={Ties That Bind-Characterizing Classes by Attributes and Social Ties},
-	  author={Rezaei, Aria and Perozzi, Bryan and Akoglu, Leman},
-	  journal={arXiv preprint arXiv:1701.09039},
-	  year={2017}
-	}
+	@inproceedings{rezaei2017ties,
+		author = {Rezaei, Aria and Perozzi, Bryan and Akoglu, Leman},
+		title = {Ties That Bind: Characterizing Classes by Attributes and Social Ties},
+		booktitle = {Proceedings of the 26th International Conference on World Wide Web Companion},
+		series = {WWW '17 Companion},
+		year = {2017},
+		isbn = {978-1-4503-4914-7},
+		location = {Perth, Australia},
+		pages = {973--981},
+		numpages = {9},
+		url = {https://doi.org/10.1145/3041021.3055138},
+		doi = {10.1145/3041021.3055138},
+		acmid = {3055138},
+		publisher = {International World Wide Web Conferences Steering Committee},
+		address = {Republic and Canton of Geneva, Switzerland},
+		keywords = {attributed graphs, community understanding, homophily, social networks, subspace discovery},
+	} 
 
 ## Acknowledgement
 The optimization code for the *Submodular Welfare Problem* is provided by *Andreas Krause* [here](https://www.mathworks.com/matlabcentral/fileexchange/20504-submodular-function-optimization). If their code has been useful in your work, please cite them properly.
