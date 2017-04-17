@@ -1,6 +1,6 @@
 # AMENChar
 
-AMENChar is a MATLAB library that characterizing (and possible *differentiating*) attributes among different classes 
+AMENChar is a MATLAB library that characterizing (and possibly *differentiating*) attributes among different classes 
 of subgraphs in an **_attributed graph_**. These attributes can be used to further study the differences in the 
 two classes, such as differences in structure of communities or behavior of individuals.
 
